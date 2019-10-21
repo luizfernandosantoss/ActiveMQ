@@ -1,7 +1,7 @@
 import javax.jms.*;
 import javax.naming.NamingException;
 
-public class TesteProdutor {
+public class TesteProdutorFila {
 
     public static void main(String[] args) throws JMSException, NamingException {
         Fila activeMQ = new Fila();
@@ -11,6 +11,7 @@ public class TesteProdutor {
             Message message = activeMQ.getSession().createTextMessage("<pedido><id>"+i+"</id></produto>");
             producer.send(message);
         }
+        activeMQ.desconectar();
     }
 
 }

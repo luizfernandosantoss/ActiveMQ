@@ -1,9 +1,8 @@
 import javax.jms.*;
-import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.Scanner;
 
-public class TesteConsumidor {
+public class TesteConsumidorFila {
 
     public static void main(String[] args) throws NamingException,  JMSException {
         Fila activeMQ = new Fila();
